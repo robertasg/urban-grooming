@@ -56,3 +56,5 @@ postcss:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+include: ["node_modules/tailwindcss"]
