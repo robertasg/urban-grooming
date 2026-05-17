@@ -1,0 +1,37 @@
+---
+---
+/* Front matter is necessary for Jekyll */
+
+@import "tailwindcss";
+
+@layer components {
+  .bg-main {
+    background-color: #b9ba65; 
+  }
+
+  .btn-main {
+    border-radius: calc(infinity * 1px);
+    background-color: #cb6ce6;
+    padding-inline: --spacing(10);
+    padding-block: --spacing(4);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    margin: calc(var(--spacing) * 2);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .bg-secondary {
+    background-color: #cb6ce6;
+  }
+
+  .text-secondary {
+    color: #3F5232;
+  }
+
+  .divider {
+    color: #FFBD59;
+    border-color: #FFBD59;
+    /* border-width: 2px; */
+  }
+}
