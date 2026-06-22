@@ -15,6 +15,33 @@
 {% endif %}
 
 
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Urban Grooming",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "telephone": "+37063042854",
+  "email": "{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kęstučio g. 55",
+    "addressLocality": "Vilnius",
+    "addressCountry": "LT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 54.6967176,
+    "longitude": 25.2478036
+  },
+  "sameAs": [
+    "https://instagram.com/monikagroomina"
+  ]
+}
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M9MTNCX9K"></script>
 <script>
