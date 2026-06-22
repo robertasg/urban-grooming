@@ -32,6 +32,13 @@
   .divider {
     color: #FFBD59;
     border-color: #FFBD59;
-    /* border-width: 2px; */
+  }
+
+  .accent-bg {
+    background-color: #FFBD59;
+  }
+
+  .text-accent {
+    color: #FFBD59;
   }
 }

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SAMPLES_DIR="assets/img/work_samples"
+OUT_DIR="$SAMPLES_DIR/optimized"
+SIZES=(600 1200)
+
+mkdir -p "$OUT_DIR"
+
+for src in "$SAMPLES_DIR"/*.jpg; do
+  [[ -f "$src" ]] || continue
+
+  base="$OUT_DIR/$(basename "${src%.jpg}")"
+
+  for size in "${SIZES[@]}"; do
+    jpg_out="${base}_${size}.jpg"
+    webp_out="${base}_${size}.webp"
+
+    if [[ ! -f "$jpg_out" ]]; then
+      magick "$src" -resize "${size}x" -quality 80 "$jpg_out"
+      echo "  JPG  $jpg_out"
+    fi
+
+    if [[ ! -f "$webp_out" ]]; then
+      magick "$src" -resize "${size}x" -quality 75 "$webp_out"
+      echo "  WebP $webp_out"
+    fi
+  done
+done
+
+echo "Done."

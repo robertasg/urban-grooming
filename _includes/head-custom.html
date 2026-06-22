@@ -1,9 +1,26 @@
-<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+<!-- SEO meta -->
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="author" content="{{ site.email }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 
-<!-- Setup Google Analytics -->
-{% include head-custom-google-analytics.html %}
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:locale" content="{{ site.lang }}">
+{% if site.og_image %}
+<meta property="og:image" content="{{ site.og_image | absolute_url }}">
+{% endif %}
 
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" -->
 
-<!-- end custom head snippets -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4M9MTNCX9K"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-4M9MTNCX9K');
+</script>
