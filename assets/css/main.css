@@ -11,7 +11,7 @@
 
   .btn-main {
     border-radius: calc(infinity * 1px);
-    background-color: #cb6ce6;
+    background-color: #8849b1;
     padding-inline: --spacing(10);
     padding-block: --spacing(4);
     font-weight: var(--font-weight-semibold);
@@ -19,6 +19,15 @@
     margin: calc(var(--spacing) * 2);
     text-transform: uppercase;
     text-align: center;
+    transition: background-color 0.15s ease;
+  }
+
+  .btn-main:hover {
+    background-color: #793e9f;
+  }
+
+  .btn-main:active {
+    background-color: #6b358d;
   }
 
   .bg-secondary {
