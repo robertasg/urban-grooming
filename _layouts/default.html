@@ -10,16 +10,17 @@
     <![endif]-->
     {% include head-custom.html %}
   </head>
-  <body class="bg-main flex flex-col min-h-screen overflow-x-hidden">
+  <body class="bg-white flex flex-col min-h-screen overflow-x-hidden">
 
     <!-- HERO -->
-    <header class="flex flex-col items-center overflow-hidden">
-      <img class="hidden md:block w-3/4 object-cover" src="{{ 'assets/img/logo_large.svg' | relative_url }}" alt="Urban Grooming" />
-      <img class="block md:hidden w-full object-cover -m-20" src="{{ 'assets/img/logo_square.svg' | relative_url }}" alt="Urban Grooming" />
+    <header class="bg-main overflow-hidden">
+      <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
+        <img class="hidden md:block w-full object-cover" src="{{ 'assets/img/logo_large.svg' | relative_url }}" alt="Urban Grooming" />
+        <img class="block md:hidden w-full object-cover -m-20" src="{{ 'assets/img/logo_square.svg' | relative_url }}" alt="Urban Grooming" />
+      </div>
     </header>
 
-    <!-- CONTENT CARD -->
-    <div class="bg-white rounded-3xl mx-4 md:max-w-2xl md:mx-auto my-8 shadow-lg overflow-hidden">
+    <div class="w-full max-w-4xl mx-auto px-4">
 
     <!-- CTA -->
     <nav class="flex justify-center py-8 md:py-12">
@@ -32,8 +33,9 @@
     <div class="accent-bg h-px mx-8 opacity-60"></div>
 
     <!-- Darbų pavyzdžiai -->
-    <section id="darbai" class="flex flex-col py-12 px-4 md:px-8">
-      <h2 class="text-center text-secondary text-4xl font-semibold mb-8">Darbų pavyzdžiai</h2>
+    <section id="darbai" class="flex flex-col py-12">
+      <h2 class="uppercase text-center text-secondary text-4xl font-semibold mb-3">Darbų pavyzdžiai</h2>
+      <div class="h-1 w-10 mx-auto rounded-full mb-8"></div>
       <div class="carousel-outer relative overflow-hidden w-full">
         <div class="flex transition-transform duration-500 ease-in-out" id="carouselTrack">
           {% for sample in site.data.work_samples %}
@@ -50,7 +52,7 @@
                 sizes="(min-width: 768px) 33vw, 100vw"
                 src="{{ sample.img | relative_url }}"
                 alt="Darbo pavyzdys"
-                class="w-full rounded-2xl aspect-[4/3] object-cover md:aspect-auto md:h-auto"
+                class="w-full rounded-2xl aspect-[3/4] object-cover md:aspect-auto md:h-auto"
                 loading="lazy" />
             </picture>
           </div>
@@ -63,11 +65,12 @@
     </section>
 
     <!-- DIVIDER -->
-    <div class="accent-bg h-px w-2/3 max-w-sm mx-auto opacity-60 my-2"></div>
+    <div class="accent-bg h-px mx-8 opacity-60 my-2"></div>
 
     <!-- KONTAKTAI -->
-    <section id="kontaktai" class="flex flex-col py-12 px-4 md:px-8">
-      <h2 class="text-center text-secondary text-4xl font-semibold mb-8">Kontaktai</h2>
+    <section id="kontaktai" class="flex flex-col py-12">
+      <h2 class="uppercase text-center text-secondary text-4xl font-semibold mb-3">Kontaktai</h2>
+      <div class="h-1 w-10 mx-auto rounded-full mb-8"></div>
 
       <!-- Map -->
       <div class="w-full mb-10 rounded-2xl overflow-hidden shadow-lg">
@@ -112,11 +115,11 @@
       </div>
     </section>
 
-    <footer class="text-center text-secondary/60 text-xs py-6">
+    <footer class="text-center text-secondary text-xs py-6">
       © {{ 'now' | date: "%Y" }} Urban Grooming · Vilnius
     </footer>
 
-    </div><!-- /CONTENT CARD -->
+    </div><!-- /content wrapper -->
 
     <script>
       (function () {
