@@ -15,8 +15,8 @@
     <!-- HERO -->
     <header class="bg-main overflow-hidden">
       <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
-        <img class="hidden md:block w-full object-cover" src="{{ 'assets/img/logo_large.svg' | relative_url }}" alt="Urban Grooming" />
-        <img class="block md:hidden w-full object-cover -m-20" src="{{ 'assets/img/logo_square.svg' | relative_url }}" alt="Urban Grooming" />
+        <img class="hidden md:block w-full object-cover" src="{{ 'assets/img/logo_large.svg' | relative_url }}" alt="{{ site.description }}" />
+        <img class="block md:hidden w-full object-cover -m-20" src="{{ 'assets/img/logo_square.svg' | relative_url }}" alt="{{ site.description }}" />
       </div>
     </header>
 
@@ -49,7 +49,7 @@
                 srcset="{{ opt | append: '_600.jpg' | relative_url }} 600w, {{ opt | append: '_1200.jpg' | relative_url }} 1200w"
                 sizes="(min-width: 768px) 33vw, 100vw"
                 src="{{ sample.img | relative_url }}"
-                alt="Darbo pavyzdys"
+                alt="{{ sample.alt }}"
                 class="w-full rounded-2xl aspect-[3/4] object-cover md:aspect-auto md:h-auto"
                 loading="lazy" />
             </picture>
